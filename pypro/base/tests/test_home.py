@@ -1,5 +1,4 @@
 from django.test import Client
-
 from pypro.django_assertions import assert_contains
 
 
