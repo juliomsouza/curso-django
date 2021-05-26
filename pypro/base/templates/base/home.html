@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
 
     <title>Python Pro</title>
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
+    <meta name="description" content="Página do curso Python Pro">
+    <meta name="author" content="Julio Souza!">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -21,7 +21,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,82 +29,67 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="u_fNK">
+            <div class="jumbotron">
+                <h2>
+                    Curso de Python com Luciano Ramalho
+                </h2>
+                <p>
+                    Confira em breve mais informações sobre o curso que será ministrado pelo autos do livro
+                    <a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" target="=_blank"> Python Fluente</a>
+                </p>
             </div>
-            <div class="u_fNK">
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div class="_2okjE GCWdj _1-uTj">
-                                    <span class="_3r4Mt"><img alt="🤝"
-                                                              src="https://assets.grammarly.com/emoji/v1/1f91d.svg"
-                                                              class="_1JBIl j30Wa undefined"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="_5WizN _1QzSN">
-                                    <div class="_3YmQx">
-                                        <div class="_3QdKe">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                     <h5 class="card-header">
+                        Mais detalhes sobre o instrutor
+                     </h5>
+                     <div class="card-body">
+                         <p class="card-text">
+                              <img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
+                                   class="img-thumbnail float-left mr-3"/>
+                             Python’s simplicity lets you become productive quickly, but often this means you
+                             aren’t using everything it has to offer. With the updated edition of this hands-on guide,
+                             you’ll learn how to write effective, modern Python 3 code by leveraging its best ideas.
+                         </p>
+                     </div>
+                <div class="card-footer">
+                     Card footer
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <h5 class="card-header">
-                            Card title
-                        </h5>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Card content
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            Card footer
-                        </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<footer class="main-footer mt-5 pt-4 text-light">
+    <div class="container">
+        <div class="col">
+            <h3>Entre em contato</h3>
+            <address>+55 11 985648978
+            <br/>
+            <a href="mailto:ramalhopython.pro.br" class="text-light">ramalho@python.pro.br</a>
+            </address>
+        </div>
+    </div>
+    <div class="rights pb-4">
+    <div class="container">
+        <div class="col">
+            {% now 'Y' %} Python Pro. Todos os direitos reservados.
+        </div>
+    </div>
+    </div>
+</footer>
 </body>
 </html>
