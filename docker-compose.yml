@@ -2,12 +2,14 @@ version: "3.3"
 
 services:
   database:
-    container_name: curso_django_database
-    image: postgres
+    container_name: postgres
+    image: postgres:11.5
     restart: always
     volumes:
       - ./.pgdata:/var/lib/postgresql/data
-      - POSTGRES_PASSWORD=pythonpro
-      - POSTGRES_USER=pythonpro
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
     ports:
       - 5433:5432

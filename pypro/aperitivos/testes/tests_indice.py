@@ -12,13 +12,15 @@ def resp(client):
 def test_status_code(resp):
     assert resp.status_code == 200
 
+
 @pytest.mark.parametrize(
     'slug',
     [
-    'Video Aperitivo: Motivação',
-    'instalacao-windows'
+    'Video Aperitivo: Motivação', 'instalacao-windows'
     ]
 )
+
+
 def test_titulo_video(resp, titulo):
     assert_contains(resp, titulo)
 
@@ -26,8 +28,7 @@ def test_titulo_video(resp, titulo):
 @pytest.mark.parametrize(
     'slug',
     [
-    'motivação',
-    'instalacao-windows'
+    'motivação', 'instalacao-windows'
     ]
 )
 def test_link_video(resp, slug):
