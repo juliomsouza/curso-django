@@ -8,6 +8,7 @@ videos = [
     ]
 videos_dct = {v.slug: v for v in videos}
 
+
 def indice(request):
     return render(request, 'aperitivos/indice.html', context={'videos': videos})
 
