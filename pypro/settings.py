@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    'ordered-model',
+    'ordered_model',
     'django_extensions',
 
 ]
