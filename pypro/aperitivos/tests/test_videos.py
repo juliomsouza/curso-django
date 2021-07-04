@@ -33,5 +33,5 @@ def test_titulo_video(resp, video):
     assert_contains(resp, video.titulo)
 
 
-def test_conteudo_video(resp):
-    assert_contains(resp, '<iframe src="https://youtu.be/GEA-QiQeztU"')
+def test_conteudo_video(resp, video):
+    assert_contains(resp, f'<iframe src="https://youtu.be/{video.youtube_id }"')

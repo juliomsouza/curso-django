@@ -7,7 +7,7 @@ from pypro.django_assertions import assert_contains, assert_not_contains
 
 @pytest.fixture
 def resp(client, db):
-    client.get(reverse('login'))
+    return client.get(reverse('login'))
 
 
 def test_login_form_page(resp):
@@ -26,7 +26,7 @@ def usuario(db, django_user_model):
 
 @pytest.fixture
 def resp_post(client, usuario):
-    client.get(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})
+    return client.get(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})
 
 
 def test_login_redirect(resp_post):
@@ -36,7 +36,7 @@ def test_login_redirect(resp_post):
 
 @pytest.fixture
 def resp_home(client, db):
-    client.get(reverse('base:home'))
+    return client.get(reverse('base:home'))
 
 
 def test_botao_entrar_disponivel(resp_home):
