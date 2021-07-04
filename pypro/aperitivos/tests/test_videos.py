@@ -10,6 +10,7 @@ from pypro.django_assertions import assert_contains
 def video(db):
     return mommy.make(Video)
 
+
 @pytest.fixture
 def resp(client, video):
     return client.get(reverse('aperitivos:video', args=(video.slug,)))

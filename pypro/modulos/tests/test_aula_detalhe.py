@@ -10,6 +10,7 @@ from pypro.modulos.models import Modulo, Aula
 def modulos(db):
     return mommy.make(Modulo)
 
+
 @pytest.fixture
 def aula(modulo):
     return mommy.make(Aula, modulo=modulo)
@@ -41,4 +42,4 @@ def resp_sem_usuario(client, aula):
 
 def test_usuario_nao_logado_redirect(resp_sem_usuario):
     assert resp_sem_usuario.status_code == 302
-    assert  resp_sem_usuario.url.startswith(reverse('login'))
+    assert resp_sem_usuario.url.startswith(reverse('login'))
