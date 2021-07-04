@@ -36,7 +36,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {%  for modulo in MODULOS %}
-                    <a class="dropdown-item" href="{{modulo.get_absolute_url}}">{{modulo.get_absolute_url}}</a>
+                    <a class="dropdown-item" href="{{modulo.get_absolute_url}}">{{modulo.titulo}}</a>
                     <div class="dropdown-divider"></div>
                     {% endfor %}
                 </div>
@@ -57,14 +57,12 @@
             </li>
         </ul>
     {% else %}
-      <a  class="btn btn-light  my-2" href="{% url 'login' %}">Entrar</a>
+    <a  class="btn btn-light  my-2" href="{% url 'login' %}">Entrar</a>
     {% endif %}
     </div>
 </nav>
 
-{% block body %}
-
-{% endblock body %}
+{% block body %}{% endblock body %}
 
 {% include 'base/footer.html' with contato_email='ramalho@python.pro.br' only %}
 

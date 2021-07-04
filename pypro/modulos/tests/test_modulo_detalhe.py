@@ -7,7 +7,7 @@ from pypro.modulos.models import Modulo, Aula
 
 
 @pytest.fixture
-def modulos(db):
+def modulo(db):
     return mommy.make(Modulo)
 
 @pytest.fixture

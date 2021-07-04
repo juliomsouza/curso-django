@@ -16,7 +16,7 @@ class Modulo(OrderedModel):
         return self.titulo
 
     def get_absolute_url(self):
-        return reverse('modulos:detalhes', kwargs={'slug': self.slug})
+        return reverse('modulos:detalhe', kwargs={'slug': self.slug})
 
 class Aula(OrderedModel):
     titulo = models.CharField(max_length=64)
