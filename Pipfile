@@ -17,6 +17,7 @@ pytest = "*"
 requests = "*"
 ipython = "*"
 django-extensions = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 flake8 = "*"
