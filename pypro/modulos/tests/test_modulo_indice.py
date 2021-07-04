@@ -22,7 +22,7 @@ def aulas(modulos):
 
 
 @pytest.fixture
-def resp(client, modulo, aulas):
+def resp(client, modulos, aulas):
     resp = client.get(reverse('modulos:indice'))
     return resp
 
