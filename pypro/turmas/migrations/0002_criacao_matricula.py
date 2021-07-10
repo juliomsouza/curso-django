@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('turmas', '0001_initial'),
@@ -20,7 +19,7 @@ class Migration(migrations.Migration):
                 ('data', models.DateTimeField(auto_now_add=True)),
                 ('turma', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='turmas.turma')),
                 ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ],
+                   ],
         ),
         migrations.AddField(
             model_name='turma',

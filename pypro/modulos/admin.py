@@ -10,7 +10,7 @@ class ModuloAdmin(OrderedModelAdmin):
 
 
 @admin.register(Aula)
-class ModuloAdmin(OrderedModelAdmin):
+class AulaAdmin(OrderedModelAdmin):
     list_display = ('titulo', 'modulo', 'order', 'move_up_down_links')
     list_filter = ('modulo',)
     ordering = ('modulo', 'order')
