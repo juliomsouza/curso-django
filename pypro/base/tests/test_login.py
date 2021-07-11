@@ -26,7 +26,7 @@ def usuario(db, django_user_model):
 
 @pytest.fixture
 def resp_post(client, usuario):
-    return client.get(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})
+    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})
 
 
 def test_login_redirect(resp_post):
